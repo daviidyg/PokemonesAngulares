@@ -3,7 +3,7 @@ img{
     height: 200px;
 }
 .titulo{
-    height: 8%;
+    height: 50px;
     width:100%;
     padding: 0;
     background-color: blue;
@@ -24,4 +24,13 @@ img{
     padding: 5px;
     border: 1px solid lightgray;
     border-bottom: 5px solid green;
+}
+.edicion{
+    height: 50px;
+    width:100%;
+    padding: 0;
+    background-color: whitesmoke;
+    font-weight: bold;
+    font-size: 20px;
+    border-top: 1px solid lightgray;
 }
