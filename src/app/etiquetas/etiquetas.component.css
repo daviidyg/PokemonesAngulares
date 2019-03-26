@@ -1,0 +1,27 @@
+img{
+    width:200px;
+    height: 200px;
+}
+.titulo{
+    height: 8%;
+    width:100%;
+    padding: 0;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.card{
+    border-color: blue;
+    border-radius: 5px;
+}
+.imagen{
+    width: 150px;
+    height: 150px;
+    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png");
+    background-size: cover;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-bottom: 5px solid green;
+}

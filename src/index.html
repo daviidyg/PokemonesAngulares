@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Pokemon App</title>
@@ -8,53 +9,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Pokemon App</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Normal</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Fire</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Water</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Electric</a>
-                  </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Altres tipus
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Grass</a>
-                <a class="dropdown-item" href="#">Ice</a>
-                <a class="dropdown-item" href="#">Fighting</a>
-                <a class="dropdown-item" href="#">Poision</a>
-                <a class="dropdown-item" href="#">Ground</a>
-                <a class="dropdown-item" href="#">Flying</a>
-                <a class="dropdown-item" href="#">Psychic</a>
-                <a class="dropdown-item" href="#">Bug</a>
-              </div>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Buscar els tipus de pokemons..etc" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-          </form>
-        </div>
-      </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Pokemon App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Normal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Fire</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Water</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Electric</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Altres tipus
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Grass</a>
+            <a class="dropdown-item" href="#">Ice</a>
+            <a class="dropdown-item" href="#">Fighting</a>
+            <a class="dropdown-item" href="#">Poision</a>
+            <a class="dropdown-item" href="#">Ground</a>
+            <a class="dropdown-item" href="#">Flying</a>
+            <a class="dropdown-item" href="#">Psychic</a>
+            <a class="dropdown-item" href="#">Bug</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar els tipus de pokemons..etc"
+          aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"
+            aria-hidden="true"></i></button>
+      </form>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+          <app-etiquetas></app-etiquetas>
+      </div>
+    </div>
+  </div>
   <app-root></app-root>
-  <app-etiquetas></app-etiquetas>
 </body>
+
 </html>
