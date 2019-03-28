@@ -24,8 +24,8 @@
           </div>
           <div class="col-8">
             <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+              <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{'width' : '' + pokemon.hp +'%'}">
+                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{{pokemon.hp}}%</div>
             </div>
           </div>
           <div class="col-12">
@@ -168,9 +168,3 @@
   </div>
   
 </div>
-<button (click)="getPokimons()">vamoscoño</button>
-<ul>
-  <li *ngFor="let pokemon of listapokemons">
-    -- id: {{pokemon.name}}
-  </li>
-</ul>
