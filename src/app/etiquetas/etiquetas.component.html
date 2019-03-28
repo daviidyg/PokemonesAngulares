@@ -2,7 +2,7 @@
   <div *ngFor="let pokemon of listapokemons" class="card col-12 col-md-3 col-lg-3 col-sm-10 p-0">
     <div class="titulo pl-3 pt-2">{{pokemon.name}}</div>
     <div class="row p-2 m-1">
-      <div class="imagen p-2 m-2" [style.backgroundImage]="'url('+ pokemon.sprite +')'"></div>
+      <div class="imagen p-2 m-2" [style.backgroundImage]="'url('+ pokemon.sprite +')'" [ngStyle]="{'border-bottom' : ' 5px solid ' + pokemon.color +''}"></div>
       <div class="stats mt-2 ml-3">
         <span class="badge badge-info">{{pokemon.types[0]}}</span>
         <span class="badge badge-info ml-2">{{pokemon.types[1]}}</span>
