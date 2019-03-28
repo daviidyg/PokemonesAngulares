@@ -23,7 +23,6 @@ img{
 .imagen{
     width: 150px;
     height: 150px;
-    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png");
     background-size: cover;
     margin: 5px;
     padding: 5px;
