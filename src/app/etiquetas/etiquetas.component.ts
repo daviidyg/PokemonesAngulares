@@ -21,6 +21,9 @@ export class EtiquetasComponent implements OnInit {
       Pokemons => this.listapokemons=Pokemons
     )
   }
+  Normal(){
+    console.log("patata")
+  }
   
   
 }
