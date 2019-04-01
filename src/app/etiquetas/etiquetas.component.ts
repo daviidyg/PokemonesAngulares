@@ -1,31 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { ServicioService} from './../servicio.service'
 import {Pokemons} from 'src/pokemon'
+
 @Component({
   selector: 'app-etiquetas',
   templateUrl: './etiquetas.component.html',
   styleUrls: ['./etiquetas.component.css']
 })
 export class EtiquetasComponent implements OnInit {
-  private urls = 'http://localhost:3000/pokemons';
   public listapokemons: Pokemons[];
-  private temparray = [];
-  constructor(public http: HttpClient) {
+  constructor(private _servicio:ServicioService) {
     
    }
    
   ngOnInit() {
-    this.getPokimons()
+    this.getPokemon()
   }
-  private getPokimons(){
-    const url = '${this.urls}';
-    return this.http.get(this.urls)
-    .subscribe((res : any[]) => {
-      console.log(res);
-      this.temparray = res;
-      this.listapokemons = res;
-      console.log(this.listapokemons)
-    });
+  getPokemon(){
+    this._servicio.getPokimons().subscribe(
+      Pokemons => this.listapokemons=Pokemons
+    )
   }
+  
   
 }
