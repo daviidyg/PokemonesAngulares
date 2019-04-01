@@ -14,8 +14,6 @@ export class ServicioService {
     
   }
   getPokimons(): Observable<Pokemons[]>{
-    const url = '${this.urls}';
     return this.http.get<Pokemons[]>(this.urls);
-    
 }
 }

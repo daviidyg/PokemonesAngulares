@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ServicioService} from './../servicio.service'
+import { Component, OnInit, Input } from '@angular/core';
 import {Pokemons} from 'src/pokemon'
 
 @Component({
@@ -8,18 +7,12 @@ import {Pokemons} from 'src/pokemon'
   styleUrls: ['./etiquetas.component.css']
 })
 export class EtiquetasComponent implements OnInit {
-  public listapokemons: Pokemons[];
-  constructor(private _servicio:ServicioService) {
+  @Input() pokemon : Pokemons;
+  constructor() {
     
    }
    
   ngOnInit() {
-    this.getPokemon()
-  }
-  getPokemon(){
-    this._servicio.getPokimons().subscribe(
-      Pokemons => this.listapokemons=Pokemons
-    )
   }
   Normal(){
     console.log("patata")

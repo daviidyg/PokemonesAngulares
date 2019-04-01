@@ -11,7 +11,7 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" onclick="Normal()" href="#">Normal</a>
+          <a class="nav-link" (click)="Normal()" href="#">Normal</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Fire</a>
@@ -47,3 +47,15 @@
       </form>
     </div>
   </nav>
+  <app-filtro></app-filtro>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+            <div class="row divcen">
+                    <div *ngFor="let pokemon of listapokemons" style="border: blue 1px solid" class=" m-4 col-12 col-sm-12 col-md-3 col-lg-3 ">
+          <app-etiquetas [pokemon]="pokemon"></app-etiquetas>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>

@@ -1,5 +1,4 @@
-<div class="row divcen">
-  <div *ngFor="let pokemon of listapokemons" style="border: blue 1px solid" class=" m-4 col-12 col-sm-12 col-md-3 col-lg-3 ">
+
     <div class="titulo  pl-3 pt-2">{{pokemon.name}}</div>
     <div class="row p-2 m-1">
       <div class="imagen p-2 m-2" [style.backgroundImage]="'url('+ pokemon.sprite +')'" [ngStyle]="{'border-bottom' : ' 5px solid ' + pokemon.color +''}"></div>
@@ -153,5 +152,5 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
+
+
