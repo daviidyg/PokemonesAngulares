@@ -1,6 +1,6 @@
 <div class="row divcen">
-  <div *ngFor="let pokemon of listapokemons" class="card col-12 col-md-3 col-lg-3 col-sm-10 p-0">
-    <div class="titulo pl-3 pt-2">{{pokemon.name}}</div>
+  <div *ngFor="let pokemon of listapokemons" style="border: blue 1px solid" class=" m-4 col-12 col-sm-12 col-md-3 col-lg-3 ">
+    <div class="titulo  pl-3 pt-2">{{pokemon.name}}</div>
     <div class="row p-2 m-1">
       <div class="imagen p-2 m-2" [style.backgroundImage]="'url('+ pokemon.sprite +')'" [ngStyle]="{'border-bottom' : ' 5px solid ' + pokemon.color +''}"></div>
       <div class="stats mt-2 ml-3">
@@ -54,7 +54,7 @@
           <div class="col-12">
             <div class="row">
               <div class="col-4">
-                <p><b>Speed</b></p>W
+                <p><b>Speed</b></p>
               </div>
               <div class="col-8">
                 <div class="progress">
