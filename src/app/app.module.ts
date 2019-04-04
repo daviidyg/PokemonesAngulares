@@ -6,18 +6,21 @@ import { EtiquetasComponent } from './etiquetas/etiquetas.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HttpClientModule } from '@angular/common/http';
 import { FiltroComponent } from './filtro/filtro.component';
+import {PokemonFilterPipe} from './etiquetas/pokemon-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     EtiquetasComponent,
-    FiltroComponent
+    FiltroComponent,
+    PokemonFilterPipe
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent, EtiquetasComponent, FiltroComponent]

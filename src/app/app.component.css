@@ -1,4 +1,9 @@
 .divcen{
     display:flex;
     align-content: center;
+    max-width: 160vh;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
 }

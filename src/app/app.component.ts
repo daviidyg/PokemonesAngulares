@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ServicioService} from './servicio.service'
-import {Pokemons} from 'src/pokemon'
+import { ServicioService} from './servicio.service';
+import {Pokemons} from 'src/pokemon';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,12 +9,13 @@ import {Pokemons} from 'src/pokemon'
 export class AppComponent {
   title = 'Pokemon';
   public listapokemons: Pokemons[];
+  search: string;
   constructor(private _servicio:ServicioService) {
     
    }
   ngOnInit() {
     this.getPokemon()
-    console.log(this.getPokemon())
+    console.log(this.getPokemon());
   }
   getPokemon(){
     this._servicio.getPokimons().subscribe(

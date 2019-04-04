@@ -1,5 +1,5 @@
 
-    <div class="titulo  pl-3 pt-2">{{pokemon.name}}</div>
+    <div class="titulo pl-3 pt-2">{{pokemon.name}}</div>
     <div class="row p-2 m-1">
       <div class="imagen p-2 m-2" [style.backgroundImage]="'url('+ pokemon.sprite +')'" [ngStyle]="{'border-bottom' : ' 5px solid ' + pokemon.color +''}"></div>
       <div class="stats mt-2 ml-3">
@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="card-body">
+    <div class="">
       <div class="col-12 p-0 ">
         <div class="row">
           <div class="col-4">
@@ -67,7 +67,7 @@
         </div>
       </div>
     </div>
-    <div class="card-body edicion p-0">
+    <div class=" edicion p-0">
       <div class="p-2 ml-2">
         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal"
           style="color:white"><i class="fa fa-pencil"></i> Editar</button>

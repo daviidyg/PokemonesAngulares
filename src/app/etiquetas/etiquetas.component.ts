@@ -7,6 +7,7 @@ import {Pokemons} from 'src/pokemon'
   styleUrls: ['./etiquetas.component.css']
 })
 export class EtiquetasComponent implements OnInit {
+  
   @Input() pokemon : Pokemons;
   constructor() {
     

@@ -40,22 +40,18 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Buscar els tipus de pokemons..etc"
-          aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"
-            aria-hidden="true"></i></button>
+        <input class="form-control mr-sm-2" type="text" placeholder="Buscar els tipus de pokemons..etc"
+          aria-label="Search" ngModel="search">
       </form>
     </div>
   </nav>
   <app-filtro></app-filtro>
   <div class="container-fluid">
-    <div class="row">
       <div class="col-12">
-            <div class="row divcen">
-                    <div *ngFor="let pokemon of listapokemons" style="border: blue 1px solid" class=" m-4 col-12 col-sm-12 col-md-3 col-lg-3 ">
-          <app-etiquetas [pokemon]="pokemon"></app-etiquetas>
+            <div class="row ">
+              <div *ngFor="let pokemon of listapokemons | PokemonFilterPipe:search" style=" width:75vh; border: blue 1px solid; border-radius: 8px" class="mx-auto m-1 my-2 col-12 col-sm-6 col-md-6 col-lg-3 ">
+              <app-etiquetas  [pokemon]="pokemon"></app-etiquetas>
           </div>
           </div>
       </div>
     </div>
-  </div>

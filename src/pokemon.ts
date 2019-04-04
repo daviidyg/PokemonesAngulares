@@ -9,4 +9,5 @@ export class Pokemons {
     defense: number;
     speed: number;
     types: string[];
+    search: string;
 }
