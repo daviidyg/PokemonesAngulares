@@ -8,19 +8,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" (click)="Tipos('Home')" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="Normal()" href="#">Normal</a>
+          <a class="nav-link" (click)="Tipos('Normal')" href="#">Normal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Fire</a>
+          <a class="nav-link" (click)="Tipos('Fire')" href="#">Fire</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Water</a>
+          <a class="nav-link" (click)="Tipos('Water')" href="#">Water</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Electric</a>
+          <a class="nav-link" (click)="Tipos('Electric')" href="#">Electric</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -28,14 +28,14 @@
             Altres tipus
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Grass</a>
-            <a class="dropdown-item" href="#">Ice</a>
-            <a class="dropdown-item" href="#">Fighting</a>
-            <a class="dropdown-item" href="#">Poision</a>
-            <a class="dropdown-item" href="#">Ground</a>
-            <a class="dropdown-item" href="#">Flying</a>
-            <a class="dropdown-item" href="#">Psychic</a>
-            <a class="dropdown-item" href="#">Bug</a>
+            <a class="dropdown-item"  (click)="Tipos('Grass')" href="#">Grass</a>
+            <a class="dropdown-item" (click)="Tipos('Ice')" href="#">Ice</a>
+            <a class="dropdown-item" (click)="Tipos('Fighting')" href="#">Fighting</a>
+            <a class="dropdown-item" (click)="Tipos('Poision')" href="#">Poision</a>
+            <a class="dropdown-item" (click)="Tipos('Ground')" href="#">Ground</a>
+            <a class="dropdown-item" (click)="Tipos('Flying')" href="#">Flying</a>
+            <a class="dropdown-item" (click)="Tipos('Psychic')" href="#">Psychic</a>
+            <a class="dropdown-item" (click)="Tipos('Bug')" href="#">Bug</a>
           </div>
         </li>
       </ul>
@@ -49,7 +49,7 @@
   <div class="container-fluid">
       <div class="col-12">
             <div class="row ">
-              <div *ngFor="let pokemon of listapokemons | PokemonFilterPipe:search" style=" width:75vh; border: blue 1px solid; border-radius: 8px" class="mx-auto m-1 my-2 col-12 col-sm-6 col-md-6 col-lg-3 ">
+              <div *ngFor="let pokemon of listapokemons | PokemonFilterPipe:search | tipoP:tipo" style=" width:75vh; border: blue 1px solid; border-radius: 8px" class="mx-auto m-1 my-2 col-12 col-sm-6 col-md-6 col-lg-3 ">
               <app-etiquetas  [pokemon]="pokemon"></app-etiquetas>
           </div>
           </div>

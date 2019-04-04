@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { FiltroComponent } from './filtro/filtro.component';
 import {PokemonFilterPipe} from './etiquetas/pokemon-filter.pipe';
 import {FormsModule} from '@angular/forms';
+import { TipoPPipe } from './tipo-p.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     EtiquetasComponent,
     FiltroComponent,
-    PokemonFilterPipe
+    PokemonFilterPipe,
+    TipoPPipe
 
   ],
   imports: [

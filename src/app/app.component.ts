@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'Pokemon';
   public listapokemons: Pokemons[];
   search = '';
+  tipo = '';
   constructor(private _servicio:ServicioService) {
     
    }
@@ -21,5 +22,8 @@ export class AppComponent {
     this._servicio.getPokimons().subscribe(
       Pokemons => this.listapokemons=Pokemons
     )
+  }
+  Tipos(types){
+    this.tipo=types;
   }
 }
