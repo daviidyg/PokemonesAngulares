@@ -9,7 +9,7 @@ import {Pokemons} from 'src/pokemon';
 export class AppComponent {
   title = 'Pokemon';
   public listapokemons: Pokemons[];
-  search: string;
+  search = '';
   constructor(private _servicio:ServicioService) {
     
    }

@@ -7,7 +7,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HttpClientModule } from '@angular/common/http';
 import { FiltroComponent } from './filtro/filtro.component';
 import {PokemonFilterPipe} from './etiquetas/pokemon-filter.pipe';
-
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +21,7 @@ import {PokemonFilterPipe} from './etiquetas/pokemon-filter.pipe';
     AppRoutingModule,
     AngularFontAwesomeModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent, EtiquetasComponent, FiltroComponent]
