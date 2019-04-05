@@ -69,12 +69,12 @@
     </div>
     <div class=" edicion p-0">
       <div class="p-2 ml-2">
-        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal"
+        <button type="button" class="btn btn-warning" data-toggle="modal" [attr.data-target]="'#' + pokemon.name"
           style="color:white"><i class="fa fa-pencil"></i> Editar</button>
         <button type="button" class="btn btn-danger ml-2"><i class="fa fa-trash"></i> Esborrar</button>
       </div>
     </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" [id]="pokemon.name" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
       aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -98,7 +98,7 @@
                 </div>
                 <div class="col-6">
                   <div class="input-group mb-2 mr-sm-2">
-                    <input type="text" class="form-control" placeholder="25">
+                    <input type="text" class="form-control" placeholder="{{pokemon.hp}}">
                     <div class="input-group-prepend">
                       <div class="input-group-text">%</div>
                     </div>
@@ -109,7 +109,7 @@
                 </div>
                 <div class="col-6">
                   <div class="input-group mb-2 mr-sm-2">
-                    <input type="text" class="form-control" placeholder="25">
+                    <input type="text" class="form-control" placeholder="{{pokemon.attack}}">
                     <div class="input-group-prepend">
                       <div class="input-group-text">%</div>
                     </div>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="col-6">
                   <div class="input-group mb-2 mr-sm-2">
-                    <input type="text" class="form-control" placeholder="25">
+                    <input type="text" class="form-control" placeholder="{{pokemon.defense}}">
                     <div class="input-group-prepend">
                       <div class="input-group-text">%</div>
                     </div>
@@ -132,7 +132,7 @@
                 <div class="col-6">
                   <div class="input-group mb-2 mr-sm-2">
                     
-                    <input type="text" class="form-control" placeholder="25">
+                    <input type="text" class="form-control" placeholder="{{pokemon.speed}}">
                     <div class="input-group-prepend">
                       <div class="input-group-text">%</div>
                     </div>

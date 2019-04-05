@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {Pokemons} from '../pokemon'
-import { unwatchFile } from 'fs';
+import {Pokemons} from '../pokemon';
 @Pipe({
   name: 'tipoP'
 })

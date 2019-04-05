@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Pokemons} from 'src/pokemon'
+import {Pokemons} from 'src/pokemon';
 
 @Component({
   selector: 'app-etiquetas',
@@ -7,17 +7,13 @@ import {Pokemons} from 'src/pokemon'
   styleUrls: ['./etiquetas.component.css']
 })
 export class EtiquetasComponent implements OnInit {
-  
-  @Input() pokemon : Pokemons;
+  posicionarray = 0;
+  @Input() pokemon: Pokemons;
   constructor() {
-    
    }
-   
   ngOnInit() {
   }
-  Normal(){
-    console.log("patata")
+  DatosModal(id) {
+     this.posicionarray = id;
   }
-  
-  
 }
