@@ -15,10 +15,10 @@
     <div class="">
       <div class="col-12 p-0 ">
         <div class="row" *ngIf='checkboxValue'>
-          <div class="col-4">
+          <div class="pl-4 col-4">
             <p><b>HP</b></p>
           </div>
-          <div class="col-8">
+          <div class="pr-4 col-8">
             <div class="progress">
               <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{'width' : '' + pokemon.hp +'%'}"
                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="200">{{pokemon.hp}}%</div>
@@ -26,10 +26,10 @@
           </div>
           <div class="col-12">
             <div class="row">
-              <div class="col-4">
+              <div class="pl-4 col-4">
                 <p><b>Attack</b></p>
               </div>
-              <div class="col-8">
+              <div class="pr-4 col-8">
                 <div class="progress">
                   <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%"[ngStyle]="{'width' : '' + pokemon.attack +'%'}"
                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="200">{{pokemon.attack}}%</div>
@@ -39,10 +39,10 @@
           </div>
           <div class="col-12">
             <div class="row">
-              <div class="col-4">
+              <div class="pl-4 col-4">
                 <p><b>Defense</b></p>
               </div>
-              <div class="col-8">
+              <div class="pr-4 col-8">
                 <div class="progress">
                   <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" [ngStyle]="{'width' : '' + pokemon.defense +'%'}"
                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="200">{{pokemon.defense}}%</div>
@@ -52,10 +52,10 @@
           </div>
           <div class="col-12">
             <div class="row">
-              <div class="col-4">
+              <div class="pl-4 col-4">
                 <p><b>Speed</b></p>
               </div>
-              <div class="col-8">
+              <div class="pr-4 col-8">
                 <div class="progress">
                   <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" [ngStyle]="{'width' : '' + pokemon.speed +'%'}"
                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="200">{{pokemon.speed}}%</div>

@@ -42,6 +42,7 @@
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" name="search" type="text" placeholder="Buscar els tipus de pokemons..etc"
           aria-label="Search" [(ngModel)]="search">
+          <i style="color: white" class="fa fa-search"></i>
       </form>
     </div>
   </nav>
@@ -68,10 +69,23 @@
   
             <div class="container-fluid">
             <div class="row ">
-                <div style=" display:flex; flex-wrap: wrap;" class="w-75 ml-auto mr-auto ">
+                <div style=" display:flex; flex-wrap: wrap;" class=" ml-auto mr-auto ">
                         <div *ngFor="let pokemon of listapokemons | PokemonFilterPipe:search | tipoP:tipo "  [ngStyle]="{'margin':'50px'}" style=" border: blue 1px solid; border-radius: 8px" class=" mx-auto my-2 col-12 col-sm-6  col-lg-4 p-0 m-2">
                         <app-etiquetas [pokemon]="pokemon" [checkboxValue]='checkboxValue'></app-etiquetas>
                   </div>
           </div>
           </div>
                 </div>
+
+<footer style="background-color: grey" class="footer mt-4">
+      <div class="container">
+          <div class="row">
+        <div class="mt-4 col-6">
+            <p><i class="mr-2 fa fa-info-circle"></i>Pokemons App - Práctica (M06)</p>
+        </div>
+          <div class="mt-4 col-6">
+              <p><i class="mr-2 fa fa-users"></i>Autor: David Yuste Galisteo i Pablo Fernández González</p>
+          </div>
+          </div>
+      </div>
+</footer>
