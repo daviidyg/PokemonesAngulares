@@ -46,12 +46,12 @@
     </div>
   </nav>
   <app-filtro></app-filtro>
-  <div class="container-fluid">
-      <div class="col-12">
+            <div class="container-fluid">
             <div class="row ">
-              <div *ngFor="let pokemon of listapokemons | PokemonFilterPipe:search | tipoP:tipo" style=" border: blue 1px solid; border-radius: 8px" class="mx-auto m-1 my-2 col-12 col-sm-6 col-md-6 col-lg-3 ">
-              <app-etiquetas  [pokemon]="pokemon"></app-etiquetas>
+                <div style=" display:flex; flex-wrap: wrap;" class="w-75 ml-auto mr-auto ">
+                        <div *ngFor="let pokemon of listapokemons | PokemonFilterPipe:search | tipoP:tipo"  [ngStyle]="{'margin':'50px'}" style=" border: blue 1px solid; border-radius: 8px" class=" mx-auto my-2 col-12 col-sm-6  col-lg-4">
+                        <app-etiquetas class="p-0"  [pokemon]="pokemon"></app-etiquetas>
+                  </div>
           </div>
           </div>
-      </div>
-    </div>
+                </div>

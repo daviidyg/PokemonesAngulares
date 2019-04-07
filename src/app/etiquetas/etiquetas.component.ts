@@ -7,13 +7,31 @@ import {Pokemons} from 'src/pokemon';
   styleUrls: ['./etiquetas.component.css']
 })
 export class EtiquetasComponent implements OnInit {
-  posicionarray = 0;
+  ataque = 0;
+  vida = 0;
+  speed = 0;
+  defensa = 0;
   @Input() pokemon: Pokemons;
   constructor() {
    }
   ngOnInit() {
   }
-  DatosModal(id) {
-     this.posicionarray = id;
+  DatosModal(vida, ataque, defensa, speed) {
+    if (vida === this.pokemon.hp ) {
+      vida = this.pokemon.hp;
+    }
+    if (ataque === this.pokemon.attack ) {
+      ataque = this.pokemon.attack;
+    }
+    if (defensa === this.pokemon.defense) {
+      defensa = this.pokemon.defense;
+    }
+    if (speed === this.pokemon.speed) {
+      speed = this.pokemon.speed;
+    }
+    this.pokemon.hp = vida;
+    this.pokemon.attack = ataque;
+    this.pokemon.defense = defensa;
+    this.pokemon.speed = speed;
   }
 }

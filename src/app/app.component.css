@@ -7,3 +7,6 @@
     float: none;
     margin: 0 auto;
 }
+.col-md-3{
+    max-width: 95%;
+}
