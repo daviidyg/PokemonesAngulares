@@ -9,6 +9,7 @@ import {Pokemons} from 'src/pokemon';
 export class EtiquetasComponent implements OnInit {
   
   @Input() pokemon: Pokemons;
+  @Input() checkboxValue:boolean;
   constructor() {
    }
   ngOnInit() {

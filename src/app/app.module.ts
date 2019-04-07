@@ -5,17 +5,17 @@ import { AppComponent } from './app.component';
 import { EtiquetasComponent } from './etiquetas/etiquetas.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HttpClientModule } from '@angular/common/http';
-import { FiltroComponent } from './filtro/filtro.component';
 import {PokemonFilterPipe} from './etiquetas/pokemon-filter.pipe';
 import {FormsModule} from '@angular/forms';
 import { TipoPPipe } from './tipo-p.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     EtiquetasComponent,
-    FiltroComponent,
     PokemonFilterPipe,
-    TipoPPipe
+    TipoPPipe,
+    
 
   ],
   imports: [
@@ -26,6 +26,6 @@ import { TipoPPipe } from './tipo-p.pipe';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent, EtiquetasComponent, FiltroComponent]
+  bootstrap: [AppComponent, EtiquetasComponent]
 })
 export class AppModule { }

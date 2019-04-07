@@ -11,6 +11,8 @@ export class AppComponent {
   public listapokemons: Pokemons[];
   search = '';
   tipo = '';
+  opcion = '';
+  checkboxValue=false;
   constructor(private _servicio:ServicioService) {
     
    }
@@ -25,5 +27,11 @@ export class AppComponent {
   }
   Tipos(types){
     this.tipo=types;
+  }
+  Opcion(op){
+     let sorted = this.listapokemons.sort((a, b) => a[op] < b[op] ? 1 : a[op] === b[op] ? 0 : -1);
+    // asc/desc
+    if (op.charAt(0) === '-') { sorted.reverse(); }
+    return sorted;
   }
 }

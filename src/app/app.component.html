@@ -45,12 +45,32 @@
       </form>
     </div>
   </nav>
-  <app-filtro></app-filtro>
+  <div class="d-flex m-4">
+      <div class="mr-1">
+          <p><b>Ordenar per:</b></p>
+      </div>
+      <div class="dropdown show" style="border: 1px solid black ">
+          <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">Tria un opció</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" (click)="Opcion('hp')" href="#">Hp</a>
+              <a class="dropdown-item"  (click)="Opcion('height')" href="#">Height</a>
+              <a class="dropdown-item" (click)="Opcion('attack')" href="#">Attack</a>
+              <a class="dropdown-item" (click)="Opcion('speed')" href="#">Speed</a>
+          </div>
+      </div>
+      <div class="ml-4 mt-2" >
+          <input type="checkbox" class="form-check-input" id="mostrarestadisticas" [(ngModel)]="checkboxValue" checked>
+          <label class="form-check-label" for="mostrarestadisticas"> Mostrar estadistica</label>
+      </div>
+  </div>
+  
+  
             <div class="container-fluid">
             <div class="row ">
                 <div style=" display:flex; flex-wrap: wrap;" class="w-75 ml-auto mr-auto ">
-                        <div *ngFor="let pokemon of listapokemons | PokemonFilterPipe:search | tipoP:tipo;let i=index"  [ngStyle]="{'margin':'50px'}" style=" border: blue 1px solid; border-radius: 8px" class=" mx-auto my-2 col-12 col-sm-6  col-lg-4">
-                        <app-etiquetas class="p-0"  [pokemon]="pokemon"></app-etiquetas>
+                        <div *ngFor="let pokemon of listapokemons | PokemonFilterPipe:search | tipoP:tipo "  [ngStyle]="{'margin':'50px'}" style=" border: blue 1px solid; border-radius: 8px" class=" mx-auto my-2 col-12 col-sm-6  col-lg-4 p-0 m-2">
+                        <app-etiquetas [pokemon]="pokemon" [checkboxValue]='checkboxValue'></app-etiquetas>
                   </div>
           </div>
           </div>
